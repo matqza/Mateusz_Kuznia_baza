@@ -1,0 +1,31 @@
+﻿<Window x:Class="Mateusz_Kuźnia_baza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mateusz_Kuźnia_baza"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="7*"  />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="datagrid" Background ="LightCyan" Grid.RowSpan="5" />
+        <Button Background ="Orange" Content="refresh Base" Grid.Column="1" Grid.Row="0" Click="refresh" />
+        <Button Background ="cyan" Content="Insert Record" Grid.Column="1" Grid.Row="1" Click="Insert_Click" />
+        <Button Background ="cyan" Content="Update Record" Grid.Column="1" Grid.Row="2" Click="Update_Click" />
+        <Button Background ="cyan" Content="Delete Record" Grid.Column="1" Grid.Row="3" Click="Delete_Click" />
+        <Button Background ="DeepPink" Content="Raport" Grid.Column="1" Grid.Row="4" Click="Raport_Click" /> 
+        <Button Background="SteelBlue" Content="Search Record ID" Grid.Column="1" Grid.Row="5" Click="Search_Click" />
+        <TextBox x:Name="search" Background ="Aquamarine" Grid.Column="0" Grid.Row="5" FontSize="45" TextAlignment="Center"></TextBox>
+    </Grid>
+</Window>
